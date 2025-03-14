@@ -1,0 +1,154 @@
+/* Full height and center content */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevents unwanted scrolling */
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif; /* Change to preferred font */
+  font-weight: bold;
+  font-size: 26px;
+  color: #222;
+}
+
+/* Labels (Username, Password) */
+label {
+  font-family: 'Poppins', sans-serif; /* Adjust as needed */
+  font-size: 16px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Background Image */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire screen */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2; /* Sends the image to the back */
+}
+
+/* Dark overlay for better contrast */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+  z-index: -1; /* Keeps it behind content */
+}
+
+/* Login Box - Perfectly Centered */
+.login-container {
+  background: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Slight transparency for better integration */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  width: 350px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Input Fields - Always Visible */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  background: white;
+  color: #333;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Placeholder */
+input::placeholder {
+  color: #999;
+}
+
+/* Input Focus Effect */
+input:focus {
+  border: 2px solid #ff8c00;
+  background: #fff8e1;
+  box-shadow: 0 0 15px rgba(255, 140, 0, 0.6);
+  transform: scale(1.02);
+}
+
+/* Login Button */
+button {
+  width: 100%;
+  background: linear-gradient(90deg, #ff8c00, #ff0080);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 15px rgba(255, 140, 0, 0.5);
+}
+
+/* Button Hover */
+button:hover {
+  background: linear-gradient(90deg, #ff0080, #ff8c00);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 140, 0, 0.8);
+}
+
+/* Smooth Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Error Message */
+.error {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-container {
+    width: 90%;
+    padding: 20px;
+  }
+}

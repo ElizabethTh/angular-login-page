@@ -1,0 +1,31 @@
+<div class="background">
+  <img
+    src="./assets/background.jpg"
+    alt="Background Image"
+    class="background-image"
+  />
+  <div class="overlay"></div>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form (ngSubmit)="login()">
+      <label for="username">Username</label>
+      <input
+        type="text"
+        id="username"
+        [(ngModel)]="username"
+        name="username"
+        required
+      />
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        [(ngModel)]="password"
+        name="password"
+        required
+      />
+      <button type="submit">Login</button>
+    </form>
+    <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+  </div>
+</div>
