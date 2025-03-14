@@ -10,7 +10,7 @@ This is a modern and responsive login page built with Angular.
 - Angular Forms with [(ngModel)] binding  
 
 ## 📸 Screenshot  
-![Login Page Preview](assets/background1.jpg)  
+![Login Page Preview](assets/Login-page.jpg) 
 
 ## 🛠️ Installation  
 1. Clone the repository:  
